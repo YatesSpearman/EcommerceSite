@@ -1,0 +1,69 @@
+{
+	"products": [
+        {
+			"productID": 1,
+			"name": "Plain White Tee",
+			"price": 25,
+			"productType": "Shirts",
+			"imgUrl": "https://images.pexels.com/photos/683381/pexels-photo-683381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+			"caption": "A beautiful white shirt, the beautifulest."
+		},
+		{
+			"productID": 2,
+			"name": "Pants",
+			"price": 30,
+			"productType": "Pants",
+			"imgUrl": "https://images.pexels.com/photos/682016/pexels-photo-682016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+			"caption": "Pants so stylish they'll make you stylish."
+		},
+		{
+			"productID": 3,
+			"name": "Hat",
+			"price": 25,
+			"productType": "Hats",
+			"imgUrl": "https://images.pexels.com/photos/67603/pexels-photo-67603.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+			"caption": "It's a really good hat."
+		},
+		{
+			"productID": 4,
+			"name": "Shoes",
+			"price": 55,
+			"productType": "Shoes",
+			"imgUrl": "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+			"caption": "Blue suede shoes"
+		},
+		{
+			"productID": 5,
+			"name": "Bear Shirt",
+			"price": 15,
+			"productType": "Shirts",
+			"imgUrl": "https://images.pexels.com/photos/724889/pexels-photo-724889.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+			"caption": "This all natural bear shirt is the perfect summer tee."
+		},
+		{
+			"productID": 6,
+			"name": "Pants",
+			"price": 45,
+			"productType": "Pants",
+			"imgUrl": "https://images.pexels.com/photos/569172/pexels-photo-569172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+			"caption": "These brown khakis are both stylish and comfortable."
+		},
+		{
+			"productID": 7,
+			"name": "Hat",
+			"price": 15,
+			"productType": "Hats",
+			"imgUrl": "https://images.pexels.com/photos/101537/baby-boy-hat-covered-101537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+			"caption": "We carry this hat in adult sizes too."
+		},
+		{
+			"productID": 8,
+			"name": "Shoes",
+			"price": 65,
+			"productType": "Shoes",
+			"imgUrl": "https://images.pexels.com/photos/637076/pexels-photo-637076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+			"caption": "The latest in sneaker technology."
+		}
+
+	]
+}
