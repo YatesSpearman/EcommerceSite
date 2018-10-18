@@ -1,6 +1,31 @@
-import React from 'react';
+import React, {Component}  from 'react';
+import request from 'superagent';
 
-function ContactForm(){
+class ContactForm extends Component {
+
+    formSubmitHandler= (event) => {
+        let firstName = document.getElementById('firstName').value; 
+        let lastName = document.getElementById('lastName').value;
+        let email = document.getElementById('email').value;
+        let phoneNumber = document.getElementById('phoneNumber').value;
+        let addressLine1 = document.getElementById('addressLine1').value;
+        let addressLine2 = document.getElementById('addressLine2').value;
+
+
+
+        request 
+            .post("http://localhost:3000/contacts")
+            .send({
+                firstName, lastName, email, phoneNumber,
+                addressLine1, addressLine2
+            })
+            .then((res) => {
+                console.log('Values Inserted!!!!');
+            });
+
+    }
+    render(){
+
     return (
         <form method="post" action="#" className="ContactForm">
             <legend>Please Submit Your Contact Information</legend>
@@ -37,11 +62,13 @@ function ContactForm(){
                 <input type="text" name="addressLine2" id="addressLine2" placeholder="City, State, Zipcode" required />
             </section>
 
-            <input type="submit" className="formSubmit"/>
+            <button type="button" onClick={this.formSubmitHandler}>Sumbit This, Yo</button>
 
 
         </form>
     );
+}
+
 }
 
 export default ContactForm;

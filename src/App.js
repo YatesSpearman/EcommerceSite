@@ -8,6 +8,8 @@ import SimpleSlider from './SimpleSlider';
 
 import './App.css';
 
+const apiURL = 'http://localhost:3000/products';
+
 class App extends Component {
   constructor(){
     super();
@@ -18,18 +20,25 @@ class App extends Component {
     };
   };
 
+ 
+
   componentDidMount(){
     
-
-    axios.get('products.json')
-    .then(res =>{
-      const json = res.data.products;
-      let newProducts = this.state.products.slice();
-      newProducts = json;
-      this.setState({
-        products: newProducts
+    fetch(apiURL)
+      .then(response => response.json())
+      .then((products) => {
+        this.setState({products})
       });
-    })
+
+    // axios.get('products.json')
+    // .then(res =>{
+    //   const json = res.data.products;
+    //   let newProducts = this.state.products.slice();
+    //   newProducts = json;
+    //   this.setState({
+    //     products: newProducts
+    //   });
+    // })
     
   }
 
