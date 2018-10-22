@@ -4,6 +4,24 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 
 export default class SimpleSlider extends Component {
+  
+  
+
+  buildSlider() {
+      for(var i=0; i < this.props.imgURL.length; i++) {
+        
+        var html = {};
+        html += <div><img className="sliderImage" src={this.props.imgURL[i].imgUrl} alt="" /></div>;
+        console.log(html)
+        
+      }
+      return html;
+  }
+
+  
+    
+  
+  
   render() {
     const settings = {
       dots: true,
@@ -19,9 +37,12 @@ export default class SimpleSlider extends Component {
 
     }
     
-    // for(i=0; i<this.props.length; i++){
-    //     console.log(i);
-    // }
+
+   
+    
+    var htmlInfo = this.buildSlider();
+    
+    
 
     
     
@@ -30,9 +51,12 @@ export default class SimpleSlider extends Component {
     
 
     return (
-      <div>
+
+      
+
+      <div className="sliderContainer">
         <Slider {...settings}>
-          
+          {/* {htmlInfo}  */}
           <div>
             <img className="sliderImage" src="https://images.pexels.com/photos/683381/pexels-photo-683381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""/>
           </div>
@@ -56,6 +80,9 @@ export default class SimpleSlider extends Component {
           </div>
           <div>
             <img className="sliderImage" src="https://images.pexels.com/photos/637076/pexels-photo-637076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""/>
+          </div>
+          <div>
+            <img className="sliderImage" src="https://c1.staticflickr.com/3/2748/4057975918_56a85d09df_o.jpg" alt=""/>
           </div>
           
         </Slider>

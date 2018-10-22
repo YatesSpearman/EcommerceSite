@@ -28,7 +28,7 @@ class ContactForm extends Component {
 
     return (
         <form method="post" action="#" className="ContactForm">
-            <legend>Please Submit Your Contact Information</legend>
+            <legend>Submit Your Contact Information To Become a Part of Our Exclusive Mailing Group!</legend>
 
             <hr />
 
@@ -62,7 +62,7 @@ class ContactForm extends Component {
                 <input type="text" name="addressLine2" id="addressLine2" placeholder="City, State, Zipcode" required />
             </section>
 
-            <button type="button" onClick={this.formSubmitHandler}>Sumbit This, Yo</button>
+            <button className="formSubmitButton" type="button" onClick={this.formSubmitHandler}>Submit</button>
 
 
         </form>

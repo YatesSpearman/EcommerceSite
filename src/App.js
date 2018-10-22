@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 import ProductList2 from './components/ProductList2';
 import Banner from './containers/Banner';
-import axios from 'axios';
 import Aux from './hoc/Aux';
 import ContactForm from './components/ContactForm';
 import SimpleSlider from './SimpleSlider';
-
+import SplashImage from './containers/SplashImage';
 import './App.css';
+
+
+import axios from 'axios';
+
+
+
+
+
+
 
 const apiURL = 'http://localhost:3000/products';
 
@@ -51,6 +59,7 @@ class App extends Component {
     return (
       <Aux>
         <Banner />
+        <SplashImage />
         <SimpleSlider imgURL={this.state.products}/>
         <ProductList2 listItems={this.state.products}/>
         <hr />

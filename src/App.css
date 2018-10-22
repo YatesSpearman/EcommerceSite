@@ -8,6 +8,53 @@
 body{
   background-color: rgb(230, 230, 230);
 }
+
+/* BANNER */
+
+.BannerWrapper{
+  background-color: rgb(0, 110, 110);
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 20vh;
+  display: block;
+  z-index: -1;
+}
+.BannerWrapper h1 {
+  text-align: center;
+}
+
+/* SplashImage */
+
+.splashContainer{
+  background-image: url('https://c2.staticflickr.com/6/5212/5470013447_e1ed98970b_b.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 80vh;
+  width: 100vw;
+  display: block;
+  margin-top: 20vh;
+  margin-bottom: 5vh;
+}
+
+.splashTextContainer{
+  width: 80vw;
+  height: 10vh;
+  background-color: rgba(187, 187, 187, 0.8);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 5vh;
+  left: 10vw;
+}
+
+.splashTextContainer h2{
+  text-align: center;
+  font-size: .8rem;
+  
+}
+
+
+
 /* SLIDER */
 
 .sliderImage{
@@ -15,21 +62,14 @@ body{
   max-width: 100%;
   height: auto;
   margin: auto;
-  
-  
-  
+}
 
+.sliderContainer{
+  display: block;
 }
 
 
-/* BANNER */
 
-.BannerWrapper{
-  background-color: rgb(0, 110, 110);
-}
-.BannerWrapper h1 {
-  text-align: center;
-}
 
 
 /* PRODUCT LIST */
@@ -97,6 +137,10 @@ body{
   text-align: center;
 }
 
+.itemPrice{
+  text-align: center;
+}
+
 .itemInfo{
   text-align: end;
 }
@@ -134,22 +178,88 @@ hr {
 }
 
 .ContactForm label{
-  display: inline-block;
-  width: 48%;
+  display: block;
+  width: 90%;
   text-align: center;
+  margin: auto;
+  padding: .25rem;
+  
 }
 .ContactForm input{
+  display: block;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  padding: .25rem;
+}
+
+.formSubmitButton{
+  height: 3rem;
+  width: 8rem;
+  display: block;
+  margin: 1rem auto; 
+}
+
+
+
+@media only screen and (min-width: 454px) {
+
+  .BannerWrapper{
+    background-color: rgb(108, 110, 0);
+  }
+
+  .splashTextContainer{
+    bottom: 5vh;
+    left: 10vw;
+  }
+
+}
+
+@media only screen and (min-width: 767px) {
+
+  .BannerWrapper{
+    background-color: rgb(110, 0, 0);
+  }
+
+  .splashTextContainer{
+    width: 30vw;
+    height: 60vh;
+    background-color: rgba(187, 187, 187, 0.8);
+    border-radius: 1rem;
+    position: relative;
+    top: 10vh;
+    left: 5vw;
+    display: flex;
+    justify-content: center; 
+    
+  
+  }
+
+  .splashTextContainer h2 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .ContactForm label{
+  display: inline-block;
+  width: 48%;
+  text-align: left;
+}
+
+  .ContactForm input{
   display: inline-block;
   width: 48%;
   text-align: center;
   margin: .5rem;
 }
 
-.formSubmit{
-  display: block !important;
-  margin: auto !important;
+.formSubmitButton{
+  width: 12rem;
 }
 
 
 
-
+}

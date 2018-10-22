@@ -35,7 +35,7 @@ app.use(bodyParser.json());
 
 // -----------PRODUCTS ENDPOINT-----------//
 app.get('/products', (req, res) => {
-    connection.query('SELECT * FROM products', function(error, results, fields) {
+    connection.query('SELECT * FROM products ORDER BY price', function(error, results, fields) {
         if(error) throw error;
         res.send(results);
     })
@@ -43,6 +43,13 @@ app.get('/products', (req, res) => {
 
 
 // -----------Contacts ENDPOINT-----------//
+app.get('/contacts', (req, res) => {
+    connection.query('SELECT * FROM contacts', function(error, results, fields) {
+        if(error) throw error;
+        res.send(results);
+    })
+});
+
 app.post('/contacts', (req, res) => {
     let firstName = req.body.firstName;
     let lastName = req.body.lastName;
@@ -57,7 +64,7 @@ app.post('/contacts', (req, res) => {
 
     connection.query(sqlInsert, function(err, results) {
         if(err) throw err;
-        console.log("Number of records inserted" + results.affectedRows);
+        console.log("Number of records inserted " + results.affectedRows);
     })
 });
 
