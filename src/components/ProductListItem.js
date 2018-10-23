@@ -4,11 +4,11 @@ function ProductListItem(props){
     return(
         <div className="ProductListItem">
             <section>
-            <h2><strong>Name:</strong> {props.name} </h2>
+            <h3><strong>Name:</strong> {props.name} </h3>
             </section>
-            <h3 className="itemPrice"><strong>Price:</strong> ${props.price} </h3>
+            <h4 className="itemPrice"><strong>Price:</strong> ${props.price} </h4>
             <img src={props.url} alt={props.text}/>
-            <h3>Description:</h3><p>{props.text}</p>
+            <h4>Description:</h4><p>{props.text}</p>
         </div>
     );
 }

@@ -27,7 +27,7 @@ class ContactForm extends Component {
     render(){
 
     return (
-        <form method="post" action="#" className="ContactForm">
+        <form method="post" action="#" className="ContactForm" id="ContactForm">
             <legend>Submit Your Contact Information To Become a Part of Our Exclusive Mailing Group!</legend>
 
             <hr />

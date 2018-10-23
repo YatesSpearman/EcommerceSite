@@ -3,7 +3,7 @@ import ProductList2 from './components/ProductList2';
 import Banner from './containers/Banner';
 import Aux from './hoc/Aux';
 import ContactForm from './components/ContactForm';
-import SimpleSlider from './SimpleSlider';
+import SimpleSlider from './components/SimpleSlider';
 import SplashImage from './containers/SplashImage';
 import './App.css';
 

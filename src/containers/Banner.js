@@ -1,10 +1,10 @@
 import React from 'react';
-
+import Navigation from './Navigation';
 function Banner(){
     return (
         <div className="BannerWrapper">
             <h1>UGLY STORE </h1>
-            <h2>We make ugly products, you wear them. </h2>
+            <Navigation />
         </div>
     );
 

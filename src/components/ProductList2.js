@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Aux from '../hoc/Aux';
-import Button from '../Button';
+import Button from '../containers/Button';
 import ProductListItem from '../components/ProductListItem';
 
 export default class ProductList2 extends Component {
@@ -75,6 +75,7 @@ export default class ProductList2 extends Component {
 
             return (
                 <Aux>
+                    <h2 id="ProductListHead">Products</h2>
                     <section className="buttonRow">
                     <Button name="All" onClick={this.handleButtonClick}/>
                     <Button name="Hats" onClick={this.handleButtonClick}/>
@@ -83,7 +84,7 @@ export default class ProductList2 extends Component {
                     <Button name="Pants" onClick={this.handleButtonClick}/>
                     </section>
 
-                    <div className="ProductList">
+                    <div className="ProductList" >
                         {itemList} 
                     </div>
 

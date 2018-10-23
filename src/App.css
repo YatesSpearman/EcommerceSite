@@ -12,16 +12,34 @@ body{
 /* BANNER */
 
 .BannerWrapper{
-  background-color: rgb(0, 110, 110);
+  background-image: linear-gradient(rgb(255, 197, 13), rgb(107, 54, 5));
   position: absolute;
   top: 0;
   width: 100vw;
-  height: 20vh;
+  height: 15vh;
   display: block;
-  z-index: -1;
 }
 .BannerWrapper h1 {
-  text-align: center;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.mainNavigation{
+  width: 100vw;
+  height: 7.5vh;
+}
+
+.mainNavigation ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.mainNavigation ul a{
+  text-decoration: none;
+  color: black;
+  display: inline;
 }
 
 /* SplashImage */
@@ -33,7 +51,7 @@ body{
   height: 80vh;
   width: 100vw;
   display: block;
-  margin-top: 20vh;
+  margin-top: 15vh;
   margin-bottom: 5vh;
 }
 
@@ -43,13 +61,14 @@ body{
   background-color: rgba(187, 187, 187, 0.8);
   border-radius: 1rem;
   position: absolute;
-  bottom: 5vh;
+  bottom: 10vh;
   left: 10vw;
 }
 
 .splashTextContainer h2{
   text-align: center;
   font-size: .8rem;
+  padding: .2rem;
   
 }
 
@@ -74,6 +93,12 @@ body{
 
 /* PRODUCT LIST */
 
+#ProductListHead{
+  width: 100vw;
+  text-align: center;
+  margin-top: 3rem; 
+}
+
 .buttonRow{
   display: flex;
   width: 100%;
@@ -84,12 +109,12 @@ body{
   height: 2rem;
   width: 4rem;
   margin: 1rem;
-  background-color: aqua;
+  background-color: rgb(255, 197, 13);
 }
 
 .generalButton:active,
 .generalButton:hover {
-  background-color: rgb(0, 110, 110);
+  background-color: rgb(167, 129, 4);
 }
 
 .ProductList {
@@ -98,7 +123,7 @@ body{
   justify-content: space-around;
   width: 90vw;
   height: 100%;
-  background-color: rgba(0, 110, 110, 0.9);
+  background-color: rgb(204, 204, 204);
   margin: auto;
 
 }
@@ -109,17 +134,9 @@ body{
   border: 2px solid black;
   margin: 1rem;
   border-radius: 1rem; 
-  background-color: aqua;
+  background-color: rgb(255, 197, 13);
 }
 
-.ProductList h1{
-  color: red;
-  font-size: 1rem;
-  display: inline-block;
-  text-align: center;
-  width: 60%;
-  padding: .5rem;
-}
 
 .ProductList p {
   display: inline-block;
@@ -127,14 +144,29 @@ body{
   
 }
 
-.ProductList h2{
+.ProductList h3{
   color: white;
   font-size: 1rem;
   display: inline-block;
   padding: .5rem;
-  background-color: rgb(0, 0, 155);
+  background-color: rgb(107, 54, 5);
   width: 100%;
   text-align: center;
+  position: relative;
+  top: -1rem;
+  border-top-left-radius: .9rem;
+  border-top-right-radius: .9rem;
+}
+
+.ProductList h4{
+  font-size: 1.25rem;
+  text-align: center;
+}
+.ProductList p{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 1rem;
 }
 
 .itemPrice{
@@ -162,7 +194,7 @@ hr {
 /* CONTACT FORM */
 
 .ContactForm {
-  background-color: rgb(0, 110, 110);
+  background-color: rgb(255, 197, 13);
   margin: 1rem;
   padding: .5rem;
 }
@@ -198,6 +230,11 @@ hr {
   width: 8rem;
   display: block;
   margin: 1rem auto; 
+  background-color: rgba(107, 54, 5, .8);
+}
+
+.formSubmitButton:hover{
+  background-color: rgba(107, 54, 5, .9);
 }
 
 
@@ -209,7 +246,7 @@ hr {
   }
 
   .splashTextContainer{
-    bottom: 5vh;
+    
     left: 10vw;
   }
 
