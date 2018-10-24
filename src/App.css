@@ -108,6 +108,12 @@ body{
   margin-top: 3rem; 
 }
 
+.buttonRowHeader{
+  display: block;
+  width: 100vw;
+  text-align: center;
+}
+
 .buttonRow{
   display: flex;
   width: 100%;

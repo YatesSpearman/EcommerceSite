@@ -2,7 +2,7 @@ import React from 'react';
 
 function ProductListItem(props){
     return(
-        <div className="ProductListItem">
+        <div className="ProductListItem" id="ProductListItem">
             <section>
             <h3 tabIndex="0"><strong>Name:</strong> {props.name} </h3>
             </section>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProductList2 from './components/ProductList2';
+import ProductList3 from './components/ProductList3';
 import Banner from './containers/Banner';
 import Aux from './hoc/Aux';
 import ContactForm from './components/ContactForm';
@@ -61,7 +61,7 @@ class App extends Component {
         <Banner />
         <SplashImage />
         <SimpleSlider imgURL={this.state.products}/>
-        <ProductList2 listItems={this.state.products}/>
+        <ProductList3 listItems={this.state.products}/>
         <hr />
         <ContactForm />
       </Aux>

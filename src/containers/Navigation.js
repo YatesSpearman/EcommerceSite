@@ -5,7 +5,7 @@ function Navigation(){
         <nav className="mainNavigation">
             <ul>
                 <li><a href='#splashContainer'>Home</a></li>
-                <li><a href='#ProductListHead'>Products</a></li>
+                <li><a href='#main'>Products</a></li>
                 <li><a href='#ContactForm'>Contact</a></li>
             </ul>
         </nav>
