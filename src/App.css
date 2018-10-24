@@ -24,6 +24,15 @@ body{
   padding-right: 1rem;
 }
 
+.hidden{
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
 .mainNavigation{
   width: 100vw;
   height: 7.5vh;
@@ -93,7 +102,7 @@ body{
 
 /* PRODUCT LIST */
 
-#ProductListHead{
+.ProductListHead{
   width: 100vw;
   text-align: center;
   margin-top: 3rem; 

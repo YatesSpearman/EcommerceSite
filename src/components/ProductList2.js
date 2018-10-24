@@ -65,7 +65,8 @@ export default class ProductList2 extends Component {
                         price={item.price}
                         url={item.imgUrl}
                         type={item.productType}
-                        text={item.caption}/>
+                        text={item.caption}
+                        />
                     );
                     
                 })
@@ -75,7 +76,7 @@ export default class ProductList2 extends Component {
 
             return (
                 <Aux>
-                    <h2 id="ProductListHead">Products</h2>
+                    <h2 className="ProductListHead" id="main" tabIndex="0">Products</h2>
                     <section className="buttonRow">
                     <Button name="All" onClick={this.handleButtonClick}/>
                     <Button name="Hats" onClick={this.handleButtonClick}/>
