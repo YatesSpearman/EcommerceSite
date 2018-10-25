@@ -68,7 +68,7 @@ export default class ProductList3 extends Component {
             <h2 className="ProductListHead" id="main" tabIndex="0">Products</h2>
             <hr />
 
-            <h3 className="buttonRowHeader">Product Types</h3>
+            <h3 className="buttonRowHeader" tabIndex="0">Product Types</h3>
             <section className="buttonRow">
                     <Button name="All" onClick={this.handleButtonClick}/>
                     <Button name="Hats" onClick={this.handleButtonClick}/>
@@ -77,7 +77,7 @@ export default class ProductList3 extends Component {
                     <Button name="Pants" onClick={this.handleButtonClick}/>
             </section>
 
-            <h3 className="buttonRowHeader">Pricing</h3>
+            <h3 className="buttonRowHeader" tabIndex="0">Pricing</h3>
             <section className="buttonRow">
                 <Button name="High To Low" onClick={this.handleHighToLowFilter} />
                 <Button name="Low To High" onClick={this.handleLowToHighFilter} />

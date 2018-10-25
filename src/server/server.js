@@ -64,10 +64,9 @@ app.delete('products/:id', (req, res)=> {
         return console.log("Must enter a valid ID. ID enetered is not a number");
     }
 
-    let sqlDeleteProductsByID = "DELETE FROM products WHERE productID = ";
-    sqlDeleteProductsByID += id;
+    let sqlDeleteProductsByID = "DELETE FROM products WHERE productID = ?";
 
-    connection.query(sqlDeleteProductsByID, function(error, results, fields) {
+    connection.query(sqlDeleteProductsByID, id, function(error, results, fields) {
         if(error) throw error;
         console.log(`Removed Contact with ID of ${id} from the database`);
     });
@@ -140,10 +139,10 @@ app.delete('contacts/:id', (req, res)=> {
         return console.log("Must enter a valid ID. ID enetered is not a number");
     }
 
-    let sqlDeleteContactsByID = "DELETE FROM contacts WHERE contactID = ";
-    sqlDeleteContactsByID += id;
+    let sqlDeleteContactsByID = "DELETE FROM contacts WHERE contactID = ?";
+    
 
-    connection.query(sqlDeleteContactsByID, function(error, results, fields) {
+    connection.query(sqlDeleteContactsByID, id, function(error, results, fields) {
         if(error) throw error;
         console.log(`Removed Contact with ID of ${id} from the database`);
     });

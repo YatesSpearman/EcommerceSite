@@ -23,6 +23,7 @@ class ContactForm extends Component {
                 console.log('Values Inserted!!!!');
             });
 
+        document.getElementById("ContactForm").reset();
     }
     render(){
 

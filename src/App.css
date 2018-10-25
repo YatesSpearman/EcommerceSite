@@ -7,6 +7,7 @@
 
 body{
   background-color: rgb(230, 230, 230);
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 /* BANNER */
@@ -22,6 +23,7 @@ body{
 .BannerWrapper h1 {
   text-align: right;
   padding-right: 1rem;
+  font-family: 'Anton', sans-serif;
 }
 
 .hidden{
@@ -106,6 +108,7 @@ body{
   width: 100vw;
   text-align: center;
   margin-top: 3rem; 
+  font-family: 'Anton', sans-serif;
 }
 
 .buttonRowHeader{
@@ -171,6 +174,7 @@ body{
   top: -1rem;
   border-top-left-radius: .9rem;
   border-top-right-radius: .9rem;
+  font-family: 'Anton', sans-serif;
 }
 
 .ProductList h4{
@@ -217,6 +221,7 @@ hr {
 .ContactForm legend {
   padding-top: .5rem;
   text-align: center;
+  font-family: 'Anton', sans-serif;
 }
 
 .ContactForm hr {
