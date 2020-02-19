@@ -7,6 +7,8 @@ on:
     branches:
       - master
       - test
+env:
+  DATE: DATE=$(date +%F)
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,17 +17,12 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: master
-      - name: Create date variable 
-        run: |
-          export DATE=$(date +%F)
       - name: Create new test branch
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git checkout -b test-$(date +%F)
       - name: Push new branch
-        run: |
-          export DATE=$(date +%F)
         uses: ad-m/github-push-action@master
         with: 
           github_token: ${{ secrets.GITHUB_TOKEN }}
