@@ -30,8 +30,10 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git branch -d test
+          git push origin --delete test
           git checkout -b test
-          git push origin test
+          git push --set-upstream origin test
 
 
 #checkout master branch
