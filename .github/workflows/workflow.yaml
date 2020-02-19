@@ -17,14 +17,12 @@ jobs:
           ref: master
       - name: Create new test branch
         run: |
-          DATE=(date +%F)
-          echo ${{env.DATE}}
-          echo $(env.DATE)
-          echo $(DATE)
+          DATE=$(date +%F)
+
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git checkout -b test-$(env.DATE)
-          git push --set-upstream origin test-$(env.DATE)
+          git checkout -b test-"$(DATE)""
+          git push --set-upstream origin test-"$(DATE)""
 
 
 #checkout master branch
