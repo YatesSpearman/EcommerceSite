@@ -7,6 +7,8 @@ on:
     branches:
       - master
       - test
+env:
+  DATE: DATE=$(date +%F)
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,12 +19,10 @@ jobs:
           ref: master
       - name: Create new test branch
         run: |
-          DATE=$(date +%F)
-          echo $(DATE)
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git checkout -b test-$(env.DATE)
-          git push --set-upstream origin test-$(env.DATE)
+          git checkout -b test-$(date +%F)
+          git push --set-upstream origin test-$(date +%F)
 
 
 #checkout master branch
