@@ -19,10 +19,11 @@ jobs:
           ref: master
       - name: Create new test branch
         run: |
+          date=$(date '+%F')
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git checkout -b test-$(date +%F)
-          git push --set-upstream origin test-$(date +%F)
+          git checkout -b test-$date
+          git push --set-upstream origin test-$date
 
 
 #checkout master branch
