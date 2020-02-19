@@ -16,7 +16,6 @@ jobs:
         with:
           ref: master
       - name: Create new test branch
-          needs: Checkout master branch
           run: |
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
