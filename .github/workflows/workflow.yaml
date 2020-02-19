@@ -1,11 +1,7 @@
 name: "Test Branch Update Flow"
-# on:
-#   schedule:
-#     - cron:  '5 * * * *'
-push:
-  branches:
-    - master
-    - test
+on:
+  schedule:
+    - cron:  '5 * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
