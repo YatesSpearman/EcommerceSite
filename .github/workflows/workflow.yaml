@@ -7,25 +7,31 @@ on:
     branches:
       - master
       - test
-env:
-  DATE: DATE=$(date +%F)
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout master branch
+      - name: Checkout test branch
         uses: actions/checkout@v2
         with:
-          ref: master
-      - name: Create new test branch
+          ref: test
+      - name: Push the old test branch 
         run: |
           date=$(date '+%F')
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git checkout -b test-$date
           git push --set-upstream origin test-$date
-
-
+      - name: Checkout test branch
+        uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: Create new test branch
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git checkout -b test
+          git push origin test
 
 #checkout master branch
 
