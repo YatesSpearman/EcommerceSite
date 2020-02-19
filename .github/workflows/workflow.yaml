@@ -18,7 +18,10 @@ jobs:
       - name: Create new test branch
         run: |
           DATE=(date +%F)
-          echo
+          echo ${{env.DATE}}
+          echo $(env.DATE)
+          echo $(DATE)
+          echo ${{DATE}}
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git checkout -b test-$(env.DATE)
