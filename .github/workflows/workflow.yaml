@@ -34,11 +34,3 @@ jobs:
           git checkout -b test
           git push --set-upstream origin test
 
-
-
-
-#checkout master branch
-
-#create and push new branch -test-date from master branch
-
-# archive old  test branch
