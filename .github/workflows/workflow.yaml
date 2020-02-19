@@ -21,8 +21,8 @@ jobs:
           echo $(DATE)
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git checkout -b test-$(DATE)
-          git push --set-upstream origin test-$(DATE)
+          git checkout -b test-$(env.DATE)
+          git push --set-upstream origin test-$(env.DATE)
 
 
 #checkout master branch
