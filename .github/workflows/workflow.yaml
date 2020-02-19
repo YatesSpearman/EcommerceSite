@@ -11,10 +11,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout test branch
+      - name: Checkout master branch
         uses: actions/checkout@v2
         with:
-          ref: test
-      - name: Log something
-        run: |
-          echo "YEEEEEET Catbug"
+          ref: master
+      - name: Create new test branch
+          needs: Checkout master branch
+          run: |
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git checkout -b test-2
+      - name: Push new branch
+        uses: ad-m/github-push-action@master
+        with: 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: test-2
+          force: true
+
+#checkout master branch
+
+#create and push new branch -test-date from master branch
+
+# archive old  test branch
