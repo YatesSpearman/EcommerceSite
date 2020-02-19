@@ -22,12 +22,8 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git checkout -b test-$(date +%F)
-      - name: Push new branch
-        uses: ad-m/github-push-action@master
-        with: 
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: test-${{env.DATE}}
-          force: true
+          git push --set-upstream origin test-$(date +%F)
+
 
 #checkout master branch
 
