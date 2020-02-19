@@ -24,6 +24,8 @@ jobs:
           git config --local user.name "GitHub Action"
           git checkout -b test-$(date +%F)
       - name: Push new branch
+        run: |
+          export DATE=$(date +%F)
         uses: ad-m/github-push-action@master
         with: 
           github_token: ${{ secrets.GITHUB_TOKEN }}
