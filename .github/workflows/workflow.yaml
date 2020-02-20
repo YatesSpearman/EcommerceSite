@@ -1,0 +1,33 @@
+name: "Test Branch Update Flow"
+on:
+  schedule:
+    - cron:  '*/6 * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout test branch
+        uses: actions/checkout@v2
+        with:
+          ref: test
+      - name: Push the old test branch 
+        run: |
+          date=$(date '+%F')
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git checkout -b test-$date
+          git push --set-upstream origin test-$date
+      - name: Checkout test branch
+        uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: Create new test branch
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git push origin --delete test
+          git checkout -b test
+          git push --set-upstream origin test
+
+
+
