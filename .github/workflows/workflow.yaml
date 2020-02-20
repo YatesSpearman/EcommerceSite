@@ -18,7 +18,3 @@ jobs:
           git config --local user.name "GitHub Action"
           git checkout -b test-$date
           git push --set-upstream origin test-$date
-
-
-
-
