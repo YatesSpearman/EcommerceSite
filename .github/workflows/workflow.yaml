@@ -1,7 +1,7 @@
 name: "Test Branch Update Flow"
 on:
   schedule:
-    - cron:  '00 12 3 * *'
+    - cron:  '*/5 * * * *'
 
 jobs:
   build:
@@ -18,3 +18,8 @@ jobs:
           git config --local user.name "GitHub Action"
           git checkout -b test-$date
           git push --set-upstream origin test-$date
+          git tag archive/test-$date test-$date
+          git checkout master
+          git branch -d test-$date
+          git push origin :test-$date
+          git push --tags
