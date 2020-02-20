@@ -29,9 +29,9 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git push origin --delete test
+          git push origin --delete test --force
           git checkout -b test
-          git push --set-upstream origin test
+          git push --set-upstream origin test --force
 
 
 
