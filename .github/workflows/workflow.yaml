@@ -30,6 +30,7 @@ jobs:
         if: always()
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
+          branch: test
       - name: Create new test branch
         run: |
           git config --local user.email "action@github.com"
@@ -44,5 +45,6 @@ jobs:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           owner: YatesSpearman
           repo: EcommerceSite
+          branch: test
 
 
