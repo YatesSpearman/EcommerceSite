@@ -21,31 +21,17 @@ jobs:
           git config --local user.name "GitHub Action"
           git checkout -b test-$date
           git push --set-upstream origin test-$date
-      - name: Checkout test branch
-        uses: actions/checkout@v2
-        with:
-          ref: master
-      - name: temporarily disable "include administrators" in branch protection
-        uses: benjefferies/branch-protection-bot@master
-        if: always()
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          branch: test
-      - name: Create new test branch
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git push origin --delete test --force
-          git checkout -b test
-          git push --set-upstream origin test --force
-      - name: Enable "include administrators" in branch protection
-        uses: benjefferies/branch-protection-bot@master
-        if: always()
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          owner: YatesSpearman
-          repo: EcommerceSite
-          branch: test
+      # - name: Checkout test branch
+      #   uses: actions/checkout@v2
+      #   with:
+      #     ref: master
+      # - name: Create new test branch
+      #   run: |
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     git push origin --delete test --force
+      #     git checkout -b test
+      #     git push --set-upstream origin test --force
 
 
 
