@@ -23,6 +23,7 @@ jobs:
         with:
           ref: master
       - name: Archive old test branch
+        run: |
           date=$(date '+%F')
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
