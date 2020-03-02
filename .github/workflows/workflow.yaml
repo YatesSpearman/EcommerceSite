@@ -13,9 +13,18 @@ jobs:
           ref: test
       - name: Push the old test branch 
         run: |
-        if [[ -z "$string" ]]; then
-          echo "String is empty"
-        elif [[ -n "$string" ]]; then
-          echo "String is not empty"
-        fi
-
+          if [[  "$(date '+%a')" = "Mon" ]]; then
+            echo "This is the first monday of the month"
+            date=$(date '+%F')
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git checkout -b test-$date
+            git push --set-upstream origin test-$date
+            git tag archive/test-$date test-$date
+            git checkout test
+            git branch -d test-$date
+            git push origin :test-$date
+            git push --tags
+          elif [[ "$(date '+%a')" != "Mon" ]]; then
+            echo "Today is not monday"
+          fi
