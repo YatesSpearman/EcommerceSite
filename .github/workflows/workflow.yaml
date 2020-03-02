@@ -1,7 +1,7 @@
 name: "Test Branch Update Flow"
 on:
   schedule:
-    - cron:  ' 0 12 1-7 * * '
+    - cron: 0 12 1-7 * * [ "$(date '+\%a')" = "Mon" ]
 
 jobs:
   build:
