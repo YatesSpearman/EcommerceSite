@@ -12,7 +12,7 @@ jobs:
         with:
           ref: test
       - name: Push the old test branch
-        if:  [[  "$(date '+%a')" = "Mon" ]]
+        if:   "$(date '+%a')" = "Mon" 
         run: |
           echo "This is the first monday of the month"
           date=$(date '+%F')
