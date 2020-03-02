@@ -1,7 +1,7 @@
 name: "Test Branch Update Flow"
 on:
   schedule:
-    - cron:  '5 9 * * 2 [ `date +\%d` -le 7 ]'
+    - cron:  '*/6 * * * *'
 
 jobs:
   build:
@@ -13,6 +13,8 @@ jobs:
           ref: test
       - name: Push the old test branch 
         run: |
+        if [[  "$(date '+%a')" = "Mon" ]]; then
+          echo "This is the first monday of the month"
           date=$(date '+%F')
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -23,3 +25,6 @@ jobs:
           git branch -d test-$date
           git push origin :test-$date
           git push --tags
+        elif [[ "$(date '+%a')" != "Mon" ]]; then
+          echo "Today is not monday"
+        fi
