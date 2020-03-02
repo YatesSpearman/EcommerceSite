@@ -25,4 +25,3 @@ jobs:
           git branch -d test-$date
           git push origin :test-$date
           git push --tags
-        fi
