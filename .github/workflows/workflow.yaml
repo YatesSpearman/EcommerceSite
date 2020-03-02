@@ -25,6 +25,4 @@ jobs:
           git branch -d test-$date
           git push origin :test-$date
           git push --tags
-        elif [[ "$(date '+%a')" != "Mon" ]]; then
-          echo "Today is not monday"
         fi
