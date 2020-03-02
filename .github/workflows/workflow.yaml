@@ -1,7 +1,7 @@
 name: "Test Branch Update Flow"
 on:
   schedule:
-    - cron: 0 12 1-7 * * [ "$(date '+\%a')" = "Mon" ]
+    - cron: '0 12 1-7 * *'
 
 jobs:
   build:
@@ -11,20 +11,18 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: test
-      - name: Push the old test branch 
+      - name: Push the old test branch
+        if:  [[  "$(date '+%a')" = "Mon" ]]
         run: |
-          if [[  "$(date '+%a')" = "Mon" ]]; then
-            echo "This is the first monday of the month"
-            date=$(date '+%F')
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git checkout -b test-$date
-            git push --set-upstream origin test-$date
-            git tag archive/test-$date test-$date
-            git checkout test
-            git branch -d test-$date
-            git push origin :test-$date
-            git push --tags
-          elif [[ "$(date '+%a')" != "Mon" ]]; then
-            echo "Today is not monday"
-          fi
+          echo "This is the first monday of the month"
+          date=$(date '+%F')
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git checkout -b test-$date
+          git push --set-upstream origin test-$date
+          git tag archive/test-$date test-$date
+          git checkout test
+          git branch -d test-$date
+          git push origin :test-$date
+          git push --tags
+
